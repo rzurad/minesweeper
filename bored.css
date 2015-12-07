@@ -1,0 +1,138 @@
+h1 {
+    text-align: center;
+}
+
+form {
+    width: 300px;
+}
+
+#grid {
+    margin: 25px auto;
+}
+
+.footer,
+.header {
+    width: 275px;
+    height: 45px;
+    margin: 20px auto;
+}
+
+.footer {
+    width: 400px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    text-align: right;
+    position: relative;
+}
+
+.dropup {
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+
+.footer-text {
+    font-size: 10px;
+}
+
+.header {
+    text-align: center;
+}
+
+.header .timer,
+.header .mine-counter {
+    width: 75px;
+    text-align: center;
+    font-family: 'Share Tech Mono';
+    background-color: black;
+    color: #e74c3c;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.header .timer {
+    float: right;
+}
+
+.header .fa-fort-awesome {
+    margin-left: 2px;
+}
+
+#restart {
+    font-size: 22px;
+}
+
+.header .mine-counter {
+    float: left;
+}
+
+td {
+    height: 25px;
+    min-width: 25px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+td.cell {
+    background-color: #ecf0f1;
+    cursor: pointer;
+}
+
+td.cell.uncovered {
+    background-color: #7f8c8d;
+    cursor: default;
+}
+
+td span {
+    pointer-events: none;
+}
+
+span.flag,
+span.wrong {
+    color: #e74c3c;
+}
+
+td.cell.uncovered.exploded {
+    background-color: #c83d2f;
+    color: #fff;
+}
+
+span.count {
+    font-size: 12px;
+    color: black;
+    font-weight: bold;
+}
+
+span.count-1 {
+    color: #2c3e50;
+}
+
+span.count-2 {
+    color: #2ecc71;
+}
+
+span.count-3 {
+    color: #0033ff;
+}
+
+span.count-4 {
+    color: #f1c40f;
+}
+
+span.count-5 {
+    color: #e88834;
+}
+
+span.count-6 {
+    color: #c83d2f;
+}
+
+span.count-7 {
+    color: #9b59b6;
+}
+
+span.count-8 {
+    color: #fff;
+}

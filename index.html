@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Minesweeper</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="./bored.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1><i class="fa fa-bomb"></i> Minesweeper</h1>
+
+            <div class="header">
+                <div class="mine-counter">10</div>
+                <div class="timer">00:00</div>
+
+                <button type="button" class="btn btn-default" id="restart">
+                    <i class="fa fa-smile-o"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <table id="grid"></table>
+        </div>
+
+        <div class="container">
+            <div class="footer">
+                <div class="dropup">
+                    <button class="btn btn-default dropdown-toggle" id="difficulty" type="button" data-toggle="dropdown">
+                        Difficulty <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a data-difficulty="beginner" href="#">Beginner</a></li>
+                        <li><a data-difficulty="intermediate" href="#">Intermediate</a></li>
+                        <li><a data-difficulty="expert" href="#">Expert</a></li>
+                        <!--
+                        <li class="divider"></li>
+                        <li><a href="#">Custom</a></li>
+                        -->
+                    </ul>
+                </div>
+
+                <span class="footer-text">
+                    Built by <a target="_new" href="https://en.wikipedia.org/wiki/Boredom">boredom</a> and <a target="_new" href="http://rzurad.github.io">Richard Zurad</a>
+                </span>
+            </div>
+
+            <!--
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="width">Width:</label>
+                    <input class="form-control" id="width" value="50" />
+                </div>
+
+                <div class="form-group">
+                    <label for="height">Height:</label>
+                    <input class="form-control" id="height" value="50" />
+                </div>
+            </form>
+
+            <input class="form-control" id="bombs" value="150" />
+            -->
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="./bored.js"></script>
+    </body>
+</html>
