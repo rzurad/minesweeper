@@ -8,10 +8,14 @@
 
         this.x = x;
         this.y = y;
-        this.isBomb = false;
         this.count = 0;
+
+        this.isBomb = false;
         this.isUncovered = false;
         this.isFlagged = false;
+        this.isQuestionable = false;
+        this.isExploded = false;
+
         this.$element = $(['<td class="cell" data-x="', x, '" data-y="', y, '"></td>'].join(''));
     }
 
@@ -28,9 +32,7 @@
     };
 
     Cell.prototype.increment = function () {
-        if (this.isBomb) { return; }
-
-        this.count++;
+        !this.isBomb && this.count++;
     };
 
     Cell.prototype.toggleFlag = function () {
@@ -174,7 +176,7 @@
         // if the randomly selected cell either matches the given coordinates, or
         // is already a bomb, abort and find a new cell to turn into a bomb
         if (($.isNumeric(x) && $.isNumeric(y) && cell.x === x && cell.y === y) || cell.isBomb) {
-            return this._makeRandomBomb();
+            return this._makeRandomBomb(x, y);
         }
 
         cell.makeBomb();
@@ -229,7 +231,7 @@
     };
 
     MineField.prototype.destroy = function () {
-        if (this.iProgress) {
+        if (this.inProgress) {
             throw new Error('Please do not destroy the MineField while it is inProgress');
         }
 
